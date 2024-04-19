@@ -1,12 +1,11 @@
 
 const category = localStorage.getItem('category')
 
-console.log('cat', category)
-const films = JSON.parse(localStorage.getItem(category))
+const neededFilm = JSON.parse(localStorage.getItem(category))
 
 const listEl = document.getElementById('list')
 
-drawFilms(films)
+drawFilms(neededFilm)
 
 /**
  * 

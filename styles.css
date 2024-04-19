@@ -92,7 +92,7 @@ body {
     height: auto;
     padding: 30px;
     top: 70px;
-    z-index: 10;
+    z-index: 100;
     max-height: 500px;
 }
 .overflow {
@@ -260,7 +260,7 @@ body {
 .slider-button__next {
     display: none;
     right: 0;
-    z-index: 100;
+    z-index: 10;
     right: 10px;
     top: 160px;
 }

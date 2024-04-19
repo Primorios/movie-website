@@ -26,14 +26,12 @@
                     </defs>
                 </svg>
             </div>
-            <div class="searching">
-                <input class="searching__input font-size16 searching__input_margin" type="text" placeholder="Фильм, сериал">
-                <button class="searching__button-search">
-                    <svg class="searching__button-search_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3C6.13401 3 3 6.13401 3 10C3 13.866 6.13401 17 10 17Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M15 15L21 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
+            <div class="search">
+                <div class="searching">
+                    <input class="searching__input font-size16 searching__input_margin" type="text" placeholder="Фильм, сериал">
+                </div>
+                <div class="search__founded overflow display">
+                </div>
             </div>
         </div>
     </header>
@@ -41,132 +39,6 @@
         <div class="page">
             <div class="movie-line">
                 <div class="movie-promo movie-promo__wrap" id="list">
-                    <div class="movie-line__cover">
-                        <div class="promo-play">
-                            <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M43.725 23.9991L14 41.924C12.25 42.974 10 41.724 10 39.674V19.6741C10 10.9491 19.425 5.49913 27 9.84913L38.475 16.4491L43.7 19.4491C45.425 20.4741 45.45 22.9741 43.725 23.9991Z" fill="#FF6914"/>
-                              <path d="M45.222 38.6515L35.097 44.5015L24.9971 50.3265C21.3721 52.4015 17.2721 51.9765 14.2971 49.8765C12.8471 48.8765 13.0221 46.6515 14.5471 45.7515L46.322 26.7015C47.822 25.8015 49.797 26.6515 50.072 28.3765C50.697 32.2515 49.097 36.4265 45.222 38.6515Z" fill="#FF6914"/>
-                            </svg>
-                        </div>
-                        <div class="movie-promo__picture">
-                            <div class="movie-promo__rating white-color font-weight-bold">
-                                8.3
-                            </div>
-                            <img class="movie-promo__img" src="/images/promo.png" alt="promo">
-                        </div>
-                        <div class="movie-promo__info">
-                            <p class="title-text font-size20 white-color font-weight-bold">Чумной доктор</p>
-                            <div class="movie-promo__subtitle">
-                                <p class="movie-promo__subtitle__year">2024,</p>
-                                <p class="movie-promo__subtitle__genre">Фантастика</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="movie-line__cover">
-                        <div class="promo-play">
-                            <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M43.725 23.9991L14 41.924C12.25 42.974 10 41.724 10 39.674V19.6741C10 10.9491 19.425 5.49913 27 9.84913L38.475 16.4491L43.7 19.4491C45.425 20.4741 45.45 22.9741 43.725 23.9991Z" fill="#FF6914"/>
-                              <path d="M45.222 38.6515L35.097 44.5015L24.9971 50.3265C21.3721 52.4015 17.2721 51.9765 14.2971 49.8765C12.8471 48.8765 13.0221 46.6515 14.5471 45.7515L46.322 26.7015C47.822 25.8015 49.797 26.6515 50.072 28.3765C50.697 32.2515 49.097 36.4265 45.222 38.6515Z" fill="#FF6914"/>
-                            </svg>
-                        </div>
-                        <div class="movie-promo__picture">
-                            <div class="movie-promo__rating white-color font-weight-bold">
-                                8.3
-                            </div>
-                            <img class="movie-promo__img" src="/images/promo_two.png" alt="promo">
-                        </div>
-                        <div class="movie-promo__info">
-                            <p class="title-text font-size20 white-color font-weight-bold">Мастер и Маргарита</p>
-                            <div class="movie-promo__subtitle">
-                                <p class="movie-promo__subtitle__year">2024,</p>
-                                <p class="movie-promo__subtitle__genre">Фантастика</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="movie-line__cover">
-                        <div class="promo-play">
-                            <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M43.725 23.9991L14 41.924C12.25 42.974 10 41.724 10 39.674V19.6741C10 10.9491 19.425 5.49913 27 9.84913L38.475 16.4491L43.7 19.4491C45.425 20.4741 45.45 22.9741 43.725 23.9991Z" fill="#FF6914"/>
-                              <path d="M45.222 38.6515L35.097 44.5015L24.9971 50.3265C21.3721 52.4015 17.2721 51.9765 14.2971 49.8765C12.8471 48.8765 13.0221 46.6515 14.5471 45.7515L46.322 26.7015C47.822 25.8015 49.797 26.6515 50.072 28.3765C50.697 32.2515 49.097 36.4265 45.222 38.6515Z" fill="#FF6914"/>
-                            </svg>
-                        </div>
-                        <div class="movie-promo__picture">
-                            <div class="movie-promo__rating white-color font-weight-bold">
-                                8.3
-                            </div>
-                            <img class="movie-promo__img" src="/images/promo_three.png" alt="promo">
-                        </div>
-                        <div class="movie-promo__info">
-                            <p class="title-text font-size20 white-color font-weight-bold">Дивергент</p>
-                            <div class="movie-promo__subtitle">
-                                <p class="movie-promo__subtitle__year">2016,</p>
-                                <p class="movie-promo__subtitle__genre">Фантастика</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="movie-line__cover">
-                        <div class="promo-play">
-                            <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M43.725 23.9991L14 41.924C12.25 42.974 10 41.724 10 39.674V19.6741C10 10.9491 19.425 5.49913 27 9.84913L38.475 16.4491L43.7 19.4491C45.425 20.4741 45.45 22.9741 43.725 23.9991Z" fill="#FF6914"/>
-                              <path d="M45.222 38.6515L35.097 44.5015L24.9971 50.3265C21.3721 52.4015 17.2721 51.9765 14.2971 49.8765C12.8471 48.8765 13.0221 46.6515 14.5471 45.7515L46.322 26.7015C47.822 25.8015 49.797 26.6515 50.072 28.3765C50.697 32.2515 49.097 36.4265 45.222 38.6515Z" fill="#FF6914"/>
-                            </svg>
-                        </div>
-                        <div class="movie-promo__picture">
-                            <div class="movie-promo__rating white-color font-weight-bold">
-                                8.3
-                            </div>
-                            <img class="movie-promo__img" src="/images/promo_four.png" alt="promo">
-                        </div>
-                        <div class="movie-promo__info">
-                            <p class="title-text font-size20 white-color font-weight-bold">Голодные игры</p>
-                            <div class="movie-promo__subtitle">
-                                <p class="movie-promo__subtitle__year">2023,</p>
-                                <p class="movie-promo__subtitle__genre">Фантастика</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="movie-line__cover">
-                        <div class="promo-play">
-                            <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M43.725 23.9991L14 41.924C12.25 42.974 10 41.724 10 39.674V19.6741C10 10.9491 19.425 5.49913 27 9.84913L38.475 16.4491L43.7 19.4491C45.425 20.4741 45.45 22.9741 43.725 23.9991Z" fill="#FF6914"/>
-                              <path d="M45.222 38.6515L35.097 44.5015L24.9971 50.3265C21.3721 52.4015 17.2721 51.9765 14.2971 49.8765C12.8471 48.8765 13.0221 46.6515 14.5471 45.7515L46.322 26.7015C47.822 25.8015 49.797 26.6515 50.072 28.3765C50.697 32.2515 49.097 36.4265 45.222 38.6515Z" fill="#FF6914"/>
-                            </svg>
-                        </div>
-                        <div class="movie-promo__picture">
-                            <div class="movie-promo__rating white-color font-weight-bold">
-                                8.3
-                            </div>
-                            <img class="movie-promo__img" src="/images/promo_one.png" alt="promo">
-                        </div>
-                        <div class="movie-promo__info">
-                            <p class="title-text font-size20 white-color font-weight-bold">Молчание</p>
-                            <div class="movie-promo__subtitle">
-                                <p class="movie-promo__subtitle__year">2024,</p>
-                                <p class="movie-promo__subtitle__genre">Фантастика</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="movie-line__cover">
-                        <div class="promo-play">
-                            <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M43.725 23.9991L14 41.924C12.25 42.974 10 41.724 10 39.674V19.6741C10 10.9491 19.425 5.49913 27 9.84913L38.475 16.4491L43.7 19.4491C45.425 20.4741 45.45 22.9741 43.725 23.9991Z" fill="#FF6914"/>
-                              <path d="M45.222 38.6515L35.097 44.5015L24.9971 50.3265C21.3721 52.4015 17.2721 51.9765 14.2971 49.8765C12.8471 48.8765 13.0221 46.6515 14.5471 45.7515L46.322 26.7015C47.822 25.8015 49.797 26.6515 50.072 28.3765C50.697 32.2515 49.097 36.4265 45.222 38.6515Z" fill="#FF6914"/>
-                            </svg>
-                        </div>
-                        <div class="movie-promo__picture">
-                            <div class="movie-promo__rating white-color font-weight-bold">
-                                8.3
-                            </div>
-                            <img class="movie-promo__img" src="/images/promo_one.png" alt="promo">
-                        </div>
-                        <div class="movie-promo__info">
-                            <p class="title-text font-size20 white-color font-weight-bold">Молчание</p>
-                            <div class="movie-promo__subtitle">
-                                <p class="movie-promo__subtitle__year">2024,</p>
-                                <p class="movie-promo__subtitle__genre">Фантастика</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

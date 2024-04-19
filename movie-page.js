@@ -98,7 +98,6 @@ function drawMoviesInfo() {
     
     likeBtn.addEventListener('click', () => {
         movie.like += 1
-        console.log(movie)
         const index = movies.findIndex(v => v.id === id)
         if (index !== -1) {
             movies.splice(index, 1, movie)
@@ -111,7 +110,6 @@ function drawMoviesInfo() {
     
     dislikeBtn.addEventListener('click', () => {
         movie.dislike += 1
-        console.log(movie)
         const index = movies.findIndex(v => v.id === id)
         if (index !== -1) {
             movies.splice(index, 1, movie)
@@ -119,7 +117,4 @@ function drawMoviesInfo() {
             drawMoviesInfo()
         }
     })
-
-
-    console.log(parentEl.querySelector('.likes-count'))
 }

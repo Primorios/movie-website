@@ -22,7 +22,7 @@ logos.forEach( function (el) {
         document.location='./main.html';
     })
 })
-const categories = ['movies', 'series']
+const categories = ['movies', 'series', 'anime']
 const films = categories.map(category => JSON.parse(localStorage.getItem(category))).flat()
 
 const input = document.querySelector('.searching__input'),
@@ -68,7 +68,9 @@ function search (list) {
     if (searchMovie.children.length < 5) {
         searchMovie.classList.remove('overflow')
     }
-
+    if (searchMovie.children.length > 5) {
+        searchMovie.classList.add('overflow')
+    }
 }
 
 function render () {
