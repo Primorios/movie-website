@@ -31,6 +31,7 @@ const input = document.querySelector('.searching__input'),
 input.addEventListener('input', () => search(films))
 
 
+
 function search (list) {
     render()
     let inputValue = input.value

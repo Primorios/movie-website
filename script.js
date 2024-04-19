@@ -356,14 +356,23 @@ let anime = [
     },
 ]
 
-localStorage.setItem('series', JSON.stringify(series))
-localStorage.setItem('movies', JSON.stringify(Movies))
-localStorage.setItem('anime', JSON.stringify(anime))
+const neededCategory = ['movies', 'series', 'anime']
+let category = JSON.parse(localStorage.getItem(neededCategory));
 
+addCategory(category)
+function addCategory(newCategory) {
+  if (!categories.includes(newCategory)) {
+    localStorage.setItem('categories', JSON.stringify(category));
+  }
+}
 
-drawMovies(Movies, 'movie-covers', "movies")
-drawMovies(series, 'series-covers', "series")
-drawMovies(anime, 'anime-covers', "anime")
+const localMovies = JSON.parse(localStorage.getItem('movies'));
+const localSeries = JSON.parse(localStorage.getItem('series'));
+const localAnime = JSON.parse(localStorage.getItem('anime'));
+
+drawMovies(localMovies, 'movie-covers', "movies")
+drawMovies(localSeries, 'series-covers', "series")
+drawMovies(localAnime, 'anime-covers', "anime")
 
 function drawMovies (list, id, category) {
     const moviePromo = document.getElementById(id)
@@ -410,7 +419,8 @@ function drawMovies (list, id, category) {
             </div>
             <div class="movie-promo__picture">
                 <div class="movie-promo__rating white-color font-weight-bold">
-                    ${el.totalScore}
+                
+                ${calculateRating(el.like, el.dislike)}
                 </div>
                 <img class="movie-promo__img" src="${el.image}" alt="promo">
             </div>
@@ -436,10 +446,16 @@ function drawMovies (list, id, category) {
                 location.href = 'movie-page.html'
             })
 
-            
-
     })
-    
+
+    function calculateRating(likes, dislikes) {
+        if (likes + dislikes === 0) {
+          return 0;
+        }
+      
+        const score = (likes / (likes + dislikes)) * 10;
+        return parseFloat(score.toFixed(1));
+      }
 }
 
 function JSONparse () {

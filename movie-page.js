@@ -79,15 +79,6 @@ function drawMoviesInfo() {
     </div>
     `
 
-    function calculateRating(likes, dislikes) {
-        if (likes + dislikes === 0) {
-          return 0;
-        }
-      
-        const score = (likes / (likes + dislikes)) * 10;
-        return parseFloat(score.toFixed(1));
-      }
-
     const parentEl = document.querySelector('.container__movies')
     while(parentEl.firstChild) {
         parentEl.removeChild(parentEl.firstChild)
@@ -117,4 +108,13 @@ function drawMoviesInfo() {
             drawMoviesInfo()
         }
     })
+
+    function calculateRating(likes, dislikes) {
+        if (likes + dislikes === 0) {
+          return 0;
+        }
+      
+        const score = (likes / (likes + dislikes)) * 10;
+        return parseFloat(score.toFixed(1));
+      }
 }
